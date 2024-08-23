@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.main{
+  background-color: whitesmoke;
+  position: fixed;
+  height: 103vh;
+  width: 100%;
+  top: -2.5%;
+  left: 0;
+}
+.Top-bar{
+  height: 20vh;
+  background-color: #778899;
+  margin-top: 1%;
+}
+.top-but{
+  height: 5vh;
+  width: 20vh;
+  margin-top: -1%;
+  margin-left: 60%;
+  background-color: #9cadc0;
+  border: none;
+  font-size: 18px;
+}
+.top-but1{
+  height: 5vh;
+  width: 20vh;
+  margin-top: -1%;
+  margin-left: 2%;
+  background-color: #9cadc0;
+  border: none;
+  font-size: 18px;
+}
+.top-but:hover{
+  background-color: transparent;
+}
+.top-but::after{
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #778899;
+  margin-top: 4px;
+  margin-left: 20%;
+  transition: width 0.5s;
+}
+.top-but:hover::after {
+  background-color: black;
+  width: 60%;
+}
+.top-but1::after{
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #778899;
+  margin-top: 4px;
+  margin-left: 20%;
+  transition: width 0.5s;
+}
+.top-but1:hover{
+  background-color: transparent;
+}
+.top-but1:hover::after {
+  background-color: black;
+  width: 60%;
+}
+.but{
+  text-decoration: none;
+  color: white;
+}
+.top-but Link{
+  text-decoration: none;
+}
+.sidebar{
+  position: absolute;
+  top:0;
+  left: -1%;
+  height: 103vh;
+  width: 30vh;
+  background-color: #778899;
+}
+.sidebar-1{
+  max-width: 100px;
+  margin-top: 50%;
+}
+.box-container{
+  margin-top: 2%;
+  margin-left: 20%;
+}
+.top-but2{
+  height: 5vh;
+  width: 20vh;
+  margin-top: 20%;
+  margin-left: 30%;
+  font-size: 17px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-left: 4px solid rgb(59, 59, 59)
+}
+.top-but2:hover{
+  background-color:#9cadc0 ;
+}
+
+.top-but3{
+  height: 5vh;
+  width: 20vh;
+  margin-left: 30%;
+  font-size: 19px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: #9cadc0;
+   border-left: 4px solid rgb(59, 59, 59);
+}
+.top-but3:hover{
+  border:none;
+  background-color: transparent;
+}
+.content{
+  margin-top: 1%;
+  text-align: center;
+  padding: 1%;
+}
+.content::after{
+  content: "";
+  display: block;
+  height: 2px;
+  width: 22%;
+  background: #778899;
+  margin-top: 4px;
+  margin-left: 39%;
+  transition: width 0.5s;
+}
+/* .content:hover::after {
+  background-color: black;
+  width: 0%;
+} */
+.im{
+  height: 200px;
+  width: 200px;
+}
+.top-circle{
+  height: 120px;
+  width: 120px;
+  border: none;
+  border-radius: 100%;
+  margin-left: 18%;
+  position: absolute;
+  z-index: 999;
+  margin-top: .5%;
+}
+.top-circle:nth-child(1) {
+  background-image: url(vansh12.PNG);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 25px white;
+}
+.top1{
+  padding-top: 2%;
+  margin-left: 18%;
+  color: white;
+  font-size: 20px;
+}
+.top-bu{
+  display: flex;
+  margin-top: -1%;
+}
+.input{
+  height: 5vh;
+  width: 50vh;
+  margin-top: 2%;
+  margin-left: 18%;
+  border: none;
+  border-radius: 5px;
+  padding-left: 20px;
+  outline: none;
+  background-color: white;
+  text-transform: capitalize;
+}
+.fa{
+  margin-top: 2.7%;
+  color: gray;
+  margin-left: -10%;
+}
+.box-container{
+  height: 55vh;
+  width: 80%;
+  padding: 2%;
+  margin-top: 1px;
+  margin-left: 15%;
+  background-color: white;
+  overflow-y: scroll;
+}
+.box-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.box-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+.box-container::-webkit-scrollbar-thumb {
+  background: #778899;
+  border-radius: 5px;
+  border: 2px solid #f1f1f1;
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.box {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: calc(100% / 3 - 40px); 
+  max-width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.box h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.box h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.box p, .box span {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.cir{
+  margin-left: -2%;
+}
