@@ -1,3 +1,3 @@
-export let arr=[
-
-];
+export let arr = {
+    
+};

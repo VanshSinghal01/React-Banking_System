@@ -223,5 +223,14 @@
     transition: 1s ease;
 }
 .validation-message{
+    margin-top: 10px;
     margin-left: 15%;
+}
+.label{
+    margin-top: 50px;
+    display: block;
+   margin-left:60px ;
+    font-size: 23px;
+    position: relative;
+    margin-bottom: -10px;
 }

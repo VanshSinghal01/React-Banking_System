@@ -171,6 +171,9 @@
   color: white;
   font-size: 20px;
 }
+.top1 h1{
+  font-size: 35px;
+}
 .top-bu{
   display: flex;
   margin-top: -1%;

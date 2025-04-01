@@ -1,0 +1,8 @@
+ Email: arr.Email,
+          Name: arr.Name,
+          Password: arr.Password,
+          ConfirmPassword: arr.ConfirmPassword,
+          Age: arr.Age,
+          ACcountNO: arr.ACcountNO,
+          Amount: arr.Amount,
+          AccType: arr.AccType,

@@ -1,0 +1,63 @@
+.otp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .otp-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .otp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+  }
+  
+  .otp-form label {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .otp-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .otp-input:focus {
+    border-color: #007bff;
+  }
+  
+  .otp-button {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .otp-button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  .otp-button:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
+  .otp-message {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #e74c3c;
+  }
+  

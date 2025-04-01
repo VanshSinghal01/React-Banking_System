@@ -1,87 +1,99 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './App.css'
-import { Link, Navigate } from 'react-router-dom'
-import logo from './bank-login-concept-illustration.png'
+import './App.css';
+import logo from './bank-login-concept-illustration.png';
 import '@fortawesome/fontawesome-free/css/all.css';
 
 function App() {
-  const [input, setinput] = useState('');
-  const [input1, setinput1] = useState('');
-  const [required, setrequired] = useState(false)
-  const [password, setpassword] = useState(false)
-  const [popup, setpopup] = useState(false)
+  const [input, setInput] = useState('');
+  const [input1, setInput1] = useState('');
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [loginError, setLoginError] = useState('');
   const navigate = useNavigate();
 
-  const submit = () => {
-    if (input === 'Vansh01' && input1 === 'vansh@123') {
-      navigate('/Dashboard'); 
+  const fetchData = async () => {
+    if (!input || !input1) {
+      setLoginError('Please fill in all details.');
+      return;
     }
-    else {
-      setrequired(true);
-    }
-    if (input !== '' && input1 !== '' && input !== 'vansh01' && input1 !== 'vansh@123') {
-      setpopup(true);
-      setrequired(false);
-    } else {
-      setpopup(false);
-    }
-  }
-  const visible=()=>{
-    setpassword(!password);
-  }
 
-  // const create=()=>{
-  //   navigate('/signin')
-  // }
+    try {
+      const response = await fetch('http://localhost:3500/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: input, password: input1 }),
+      });
+
+      const bodyValue = await response.json();
+
+      if (bodyValue.message === 'success') {
+        setLoginError('Login successful');
+
+        navigate('/Dashboard', { state: bodyValue.data });
+      } else {
+        setLoginError('Login failed');
+      }
+    } catch (error) {
+      console.error('Fetch error:', error);
+      setLoginError('Error: Unable to connect to the server.');
+    }
+  };
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
+
+  const create = () => {
+    navigate('/signin');
+  };
+
+  const handleInputChange = (setter) => (e) => {
+    setter(e.target.value);
+    setLoginError('');
+  };
 
   return (
     <>
       <h1 className='ho'>Simple And Safe Bank <span>Account!</span></h1>
-
-      { popup  && <div className='pop'>
-        <p>Your Password and User ID is Invalid....</p>
-      </div>
-      }
       <div className='header'>
         <div className='main1'>
-          <img src={logo} className='imga1' />
+          <img src={logo} className='imga1' alt="Bank logo" />
           <div className='head1'>
-            <h1>Welcom To</h1>
+            <h1>Welcome To</h1>
             <span> VSBank Login </span>
             <div className='head-1'>
-              <input type='text'
-                placeholder='User Name'
-                onChange={(e) => setinput(e.target.value)}
-                value={input} />
-                {required && input === '' && <p>Enter user name</p>}
-              {required && input !== ''  && input !== 'Vansh01' && 
-                <p>Invalid User Name</p>
-              }
-            
+              <input
+                type='text'
+                placeholder='User Email'
+                onChange={handleInputChange(setInput)}
+                value={input}
+              />
             </div>
             <div className='head-2'>
-              <input type={password ? 'text':'password'}
+              <input
+                type={passwordVisible ? 'text' : 'password'}
                 placeholder='User Password'
-                onChange={(e) => setinput1(e.target.value)}
-                value={input1} />
-                <i  className={`fa ${password ? 'fa-eye' : 'fa-eye-slash'}`} aria-hidden="true" onClick={visible}></i>
-                {required && input === '' && <p>Enter user Password</p>}
-              {required && input !== ''  && input1 !== 'vansh@123' &&
-                <p>Invalid User Password</p>
-              }
+                onChange={handleInputChange(setInput1)}
+                value={input1}
+              />
+              <i
+                className={`fa ${passwordVisible ? 'fa-eye' : 'fa-eye-slash'}`}
+                aria-hidden="true"
+                onClick={togglePasswordVisibility}
+              ></i>
             </div>
-            <div className='check'>
-              <input type="checkbox" />
-              <p>Remember Me</p>
-            </div>
-            <button className='butt' onClick={submit} ><Link className='li'>Login</Link></button>
-            {/* <button className='butt1' onClick={create}>Create New Account</button> */}
+
+            {loginError && <p className='validation-message'>{loginError}</p>}
+
+            <button className='butt' onClick={fetchData}>Login</button>
+            <button className='butt1' onClick={create}>Create New Account</button>
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

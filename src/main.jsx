@@ -5,6 +5,7 @@ import './index.css'
 import Dashboard from './dashboard.jsx';
 import Deposite from './Deposite.jsx';
 import Sign from './signin.jsx'
+import OtpVerificationPage from './Otppage.jsx';
 import Withdraw from './Withdraw.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
@@ -28,6 +29,9 @@ let data= createBrowserRouter([
   {
     path:'/Withdraw',
     element:<Withdraw/>
+  },{
+    path:'/OtpVerificationPage',
+    element:<OtpVerificationPage/>
   }
 ])
 
