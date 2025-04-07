@@ -316,14 +316,23 @@
       width: 90%;
       margin-left: auto;
       margin-right: auto;
-      margin-top: -10%;
+      margin-top: -15%;
      background-color: transparent;
      height: 1px;
+    }
+    .head1 span{
+      font-size: 30px;
+      color: #3f5f60;
+      font-weight: 600;
     }
   
     .head-1 input,
     .head-2 input,
-    .head-2 select,
+    .head-2 select{
+      width: 85%;
+      margin-left: 7.5%;
+      margin-top: 5%;
+    }
     .butt,
     .butt1 {
       width: 85%;
@@ -344,9 +353,9 @@
       display: none;
     }
     .imga2 {
-      width: 80%;
+      width: 70%;
       height: auto;
-      margin: 20px auto;
+      margin: 10px auto;
       display: block;
     }
   
