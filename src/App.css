@@ -180,6 +180,12 @@
     margin-top: 5vh;
     margin-left: 5px;
 }
+.imga2{
+    height: 70vh;
+    width: 500px;
+    margin-top: 5vh;
+    margin-left: 5px;
+}
 .check{
     display: flex;
     gap: 10px;
@@ -234,3 +240,140 @@
     position: relative;
     margin-bottom: -10px;
 }
+
+/* 🔸 Tablet view (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .main1,
+    .header {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2%;
+    }
+  
+    .head,
+    .heado1,
+    .head1 {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5%;
+      
+    }
+  
+    .imga,
+    .imga1 {
+      width: 90%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  
+    .pop {
+      width: 90%;
+      left: 5%;
+      margin-left: 0;
+    }
+  }
+  
+  /* 🔸 Mobile view (max-width: 600px) */
+  @media screen and (max-width: 600px) {
+    .main1,
+    .header {
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 3%;
+    }
+  
+    .head{
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5%;
+    }
+    .heado1{
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5%;
+      height: 95%;
+        
+    }
+    .heado1 h1{
+      font-size: 25px;
+      padding-left: 5%;
+      padding-top: 10%;
+    }
+    .heado1 span{
+      font-size: 30px;
+      padding-left: 5%;
+      color: #3f5f60;
+      font-weight: 600;
+    }
+    .head1 {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5%;
+     background-color: transparent;
+     height: 1px;
+    }
+  
+    .head-1 input,
+    .head-2 input,
+    .head-2 select,
+    .butt,
+    .butt1 {
+      width: 85%;
+      margin-left: 7.5%;
+    }
+  
+    .check {
+      flex-direction: column;
+      align-items: start;
+      margin-left: 7.5%;
+    }
+  
+    .imga,
+    .imga1 {
+      width: 80%;
+      height: auto;
+      margin: 20px auto;
+      display: none;
+    }
+    .imga2 {
+      width: 80%;
+      height: auto;
+      margin: 20px auto;
+      display: block;
+    }
+  
+    .pop {
+      width: 90%;
+      margin-left: 5%;
+      font-size: 16px;
+    }
+  
+    .ho {
+      width: 95%;
+      font-size: 30px;
+      margin-left: 2.5%;
+    }
+  
+    .label,
+    .head-1 p,
+    .head-2 p {
+      margin-left: 7.5%;
+    }
+  
+    .fa {
+      margin-left: 0%;
+    }
+  
+    .validation-message {
+      margin-left: 7.5%;
+    }
+  }
+  

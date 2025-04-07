@@ -59,7 +59,7 @@ function App() {
       <h1 className='ho'>Simple And Safe Bank <span>Account!</span></h1>
       <div className='header'>
         <div className='main1'>
-          <img src={logo} className='imga1' alt="Bank logo" />
+          <img src={logo} className='imga2' alt="Bank logo" />
           <div className='head1'>
             <h1>Welcome To</h1>
             <span> VSBank Login </span>

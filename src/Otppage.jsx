@@ -56,8 +56,8 @@ const OtpVerificationPage = () => {
       <h2 className="ho">OTP Verification</h2>
       <div className="header">
         <div className="main1">
-          <img src={logo} className="imga1" alt="Logo" />
-          <div className="heado1">
+          <img src={logo} className="imga2" alt="Logo" />
+          <div className="head1">
             <h1>Welcome</h1>
             <span>Verify Your OTP</span>
             <label className="label">Enter OTP:</label>
